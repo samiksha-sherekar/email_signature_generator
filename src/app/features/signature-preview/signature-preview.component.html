@@ -1,0 +1,59 @@
+<div class="container mt-5">
+    <div class="card shadow  mb-5 rounded">
+        <div class="card-header">
+            <h5 class="header-text">Signature Preview</h5>
+        </div>
+        <div class="card-body" >
+            <div class="m-3 p-3" *ngIf="signaturePreviewText && !formData">
+                <P class="text-center fs-4">{{signaturePreviewText}}</P>
+            </div>
+            <div *ngIf="formData">
+                <div class="m-3 p-3" #elementContentToCopy id="email-signature">
+                    <div [style.background]="formData.design?.backgroundColor">
+                        <span [style.font-family]="formData.design?.fontFamily" [style.font-size.px]="formData.design?.fontSize" [style.color]="formData.design?.templateColor">
+                            <p style="margin: 0;">{{formData.general?.fName}}</p>
+                            <p style="margin: 0;">{{formData.general?.lName}}</p>
+                            <p style="margin: 0;">{{formData.general?.email}}</p>
+                            <p style="margin: 0;">{{formData.general?.mobileNo}}</p>
+                        </span>
+
+                        <span *ngIf="formData.social?.linkedinLink">
+                            <a href="{{formData.social?.linkedinLink}}" target="_blank">
+                                <img style="width: 35px;margin-right: 10px;" src="https://firebasestorage.googleapis.com/v0/b/email-signature-9cbf1.appspot.com/o/linkdin.jpeg?alt=media&token=21e40dab-f0c1-4313-858b-b58f750a03e2" alt="linkedin">
+                            </a>
+                        </span>
+                        <span *ngIf="formData.social?.instagramLink">
+                            <a href="{{formData.social?.instagramLink}}" target="_blank">
+                                <img style="width: 35px;margin-right: 10px;" src="https://firebasestorage.googleapis.com/v0/b/email-signature-9cbf1.appspot.com/o/instagram.jpeg?alt=media&token=d5f8cdbc-b1e1-402c-966f-964adfc6e2c9" alt="instagram">
+                            </a>
+                        </span>
+                        <span *ngIf="formData.social?.facebookLink">
+                            <a href="{{formData.social?.facebookLink}}" target="_blank">
+                                <img style="width: 35px;margin-right: 10px;" src="https://firebasestorage.googleapis.com/v0/b/email-signature-9cbf1.appspot.com/o/facebook.jpeg?alt=media&token=604136f4-5da2-4cce-8cee-e542b26b52eb" alt="facebook">
+                            </a>
+                        </span>
+                        <span *ngIf="formData.social?.youtubeLink">
+                            <a href="{{formData.social?.youtubeLink}}" target="_blank">
+                                <img style="width: 35px;margin-right: 10px;" src="https://firebasestorage.googleapis.com/v0/b/email-signature-9cbf1.appspot.com/o/youtube.jpeg?alt=media&token=977983c0-1478-4352-bd5a-5203d58f72a4" alt="youtube">
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="row m-2">
+                    <div class="col-md-12">
+                            <button (click)="copySignature()" class="btn">
+                                Copy Signature
+                            </button>
+                            <button type="submit"
+                                class="btn float-end " (click)="onSubmit()">
+                                Save Signature
+                            </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="showSuccess" class="alert alert-{{alertColor}}" role="alert" style="position: fixed; bottom: 40px; right: 40px;">
+    {{ showSuccessMessage }}
+</div>

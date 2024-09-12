@@ -1,0 +1,38 @@
+.main{
+    height: 100vh;
+    background-color : #E4D0D0
+}
+/* Tab Style Start */
+    .color{
+        color:#DD2022
+    }
+    ul {
+        margin: 6;
+        padding: 0;
+    }
+    ul, li {
+        display:inline-block;
+    }
+    li a {
+        display: block;
+        color: #0c0909;
+        padding: 10px 25px;
+        text-decoration: none;
+        border-radius: 40px;
+    }
+
+    /* Change the link color on hover */
+    li a:hover {
+        background-color: #cf8788;
+        color: #fff;
+    }
+    .icon {
+        margin-right: 10px;
+    }
+
+@media (max-width: 575.98px) {
+    .main{
+        height: 216vh;
+        background-color : #E4D0D0
+    }
+}

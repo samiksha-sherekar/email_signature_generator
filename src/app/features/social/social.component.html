@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-lg-6 col-xl-12">
+            <div class="card overflow-hidden shadow p-3 mb-5 rounded">
+            <div class="card-body pt-0">
+                <div class="col-md-12">
+                <p><b>Social Media Links</b></p>
+                </div>
+                <div class="p-2">  
+                    <form [formGroup]="socialForm" >
+
+                        <!-- linkedinLink Field -->
+                        <div class="mb-3 row">
+                            <div class="col-3 col-lg-2">
+                                <img src="assets/images/linkdin.jpeg"  alt="linkedin">
+                            </div>
+                            <div class="col-9 col-lg-8">
+                            <input type="text" formControlName="linkedinLink" class="form-control"
+                                placeholder="LinkedIn URL"  >
+                                <div *ngIf="socialForm.get('linkedinLink')?.invalid && socialForm.get('linkedinLink')?.touched">
+                                    <small *ngIf="socialForm.get('linkedinLink')?.errors?.['pattern']">Please enter a valid LinkedIn URL (e.g., https://www.linkedin.com/in/username).</small>
+                                </div>
+                            </div>
+                        </div>
+                            
+                        <!-- instagramLink Field -->
+                        <div class="mb-3 row">
+                            <div class=" col-3 col-lg-2">
+                                <img src="assets/images/instagram.jpeg"  alt="instagram">
+                            </div>
+                            <div class="col-9 col-lg-8">
+                            <input type="text" formControlName="instagramLink" class="form-control"
+                                placeholder="Instagram Username"  >
+                                <div *ngIf="socialForm.get('instagramLink')?.invalid && socialForm.get('instagramLink')?.touched">
+                                    <small *ngIf="socialForm.get('instagramLink')?.errors?.['pattern']">Please enter a valid Instagram URL (e.g., https://www.instagram.com/username).</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Facebook Field -->
+                        <div class="mb-3 row">
+                            <div class="col-3 col-lg-2">
+                                <img src="assets/images/facebook.jpeg"  alt="facebook">
+                            </div>
+                            <div class="col-9 col-lg-8">
+                            <input type="text" formControlName="facebookLink" class="form-control"
+                                placeholder="Facebook URL">
+                                <div *ngIf="socialForm.get('facebookLink')?.invalid && socialForm.get('facebookLink')?.touched">
+                                    <small *ngIf="socialForm.get('facebookLink')?.errors?.['pattern']">Please enter a valid Facebook URL (e.g., https://www.facebook.com/username).</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- youtubeLink Field -->
+                        <div class="mb-3 row">
+                            <div class="col-3 col-lg-2">
+                                <img  src="assets/images/youtube.jpeg"  alt="youtube">
+                            </div>
+                            <div class="col-9 col-lg-8">
+                            <input type="text" formControlName="youtubeLink" class="form-control"
+                                placeholder="YouTube URL"  >
+                                <div *ngIf="socialForm.get('youtubeLink')?.invalid && socialForm.get('youtubeLink')?.touched">
+                                    <small *ngIf="socialForm.get('youtubeLink')?.errors?.['pattern']">Please enter a valid YouTube URL (e.g., https://www.youtube.com/channel/CHANNEL_ID).</small>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div> 
+</div>
