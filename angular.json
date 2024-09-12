@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/email_signature_generator",
+            "outputPath": "docs/email_signature_generator",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
