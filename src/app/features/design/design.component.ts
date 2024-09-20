@@ -20,10 +20,10 @@ export class DesignComponent {
       
     // Design Form Initialization
     this.designForm = new FormGroup({
-      fontFamily: new FormControl<string | null>(null, [Validators.minLength(3), Validators.maxLength(30)]),
-      fontSize: new FormControl<string | null>(null, [Validators.minLength(3), Validators.maxLength(30)]),
-      templateColor: new FormControl<string | null>(null, [Validators.minLength(3), Validators.maxLength(30)]),
-      backgroundColor: new FormControl<string | null>('#FFFFFF', [Validators.minLength(3), Validators.maxLength(30)]),
+      fontFamily: new FormControl<string | null>(null),
+      fontSize: new FormControl<string | null>(null),
+      templateColor: new FormControl<string | null>(null),
+      backgroundColor: new FormControl<string | null>('#FFFFFF'),
     });
   }
 

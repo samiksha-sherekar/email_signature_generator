@@ -20,7 +20,7 @@ export class CopySignatureService {
       document.addEventListener("copy", listener);
       document.execCommand("copy");
       document.removeEventListener("copy", listener);
-      alert("Success! Signature has been copied.");
+      
     } else {
       alert("An unexpected error occurred. Please try again later.");
     }

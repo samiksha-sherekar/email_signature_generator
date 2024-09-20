@@ -22,8 +22,9 @@ export class GeneralComponent implements OnInit {
     this.generalForm = new FormGroup({
       fName: new FormControl<string | null>(null, [Validators.minLength(3), Validators.maxLength(30)]),
       lName: new FormControl<string | null>(null, [Validators.minLength(3), Validators.maxLength(30)]),
+      position: new FormControl<string | null>(null, [Validators.minLength(3), Validators.maxLength(30)]),
       email: new FormControl<string | null>(null, [Validators.email]),
-      mobileNo: new FormControl<string | null>(null, [Validators.minLength(3), Validators.maxLength(30)]),
+      mobileNo: new FormControl<string | null>(null, [Validators.pattern('^[0-9]{10}$')]),
     });
   }
 
@@ -48,7 +49,8 @@ export class GeneralComponent implements OnInit {
           fName: getForm.basicForm.fName || '',
           lName: getForm.basicForm.lName || '',
           email: getForm.basicForm.email || '',
-          mobileNo: getForm.basicForm.mobileNo || ''
+          mobileNo: getForm.basicForm.mobileNo || '',
+          position: getForm.basicForm.position || ''
         });
       } else {
         console.warn("No general found for user.");

@@ -22,7 +22,8 @@ export class NavBarComponent implements OnInit {
 
   async logout($event:Event){
     $event.preventDefault();
-    await this.afAuth.signOut()
-    this._router.navigateByUrl('/login')
+    await this.afAuth.signOut().then(() => {
+      this._router.navigateByUrl('/login')
+    });
   }
 }

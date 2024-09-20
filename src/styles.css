@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+.main{
+    min-height: 100vh;
+    background-color : #F4F7FC;
+}
+.form-control:focus {
+    border-color: #b3d8ff;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px #d5ebff;
+}
+.btn{
+    background-color: #6385ce;
+    color: #fff;
+}
+.btn:hover{
+    background-color: #6385ce;
+    color: #fff;
+}
+@media (max-width: 575.98px) {
+    .main{
+        min-height: 100vh;
+        background-color : #F4F7FC;
+    }
+}

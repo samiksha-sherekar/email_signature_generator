@@ -75,7 +75,7 @@ export class SignaturePreviewComponent {
       await this._signatureService.createSign(this.data)
       this.showSuccessMessage = "Success! New signature has been saved."
       this.showSuccess = true
-      this.alertColor = "success"
+      this.alertColor = "primary"
       setTimeout(()=>{
         this.showSuccess = false
       },2000)
@@ -95,7 +95,7 @@ export class SignaturePreviewComponent {
 
     this.showSuccess = true;
     this.showSuccessMessage = "Success! Signature has been copied.";
-    this.alertColor = "success";
+    this.alertColor = "primary";
 
     setTimeout(() => {
       this.showSuccess = false;

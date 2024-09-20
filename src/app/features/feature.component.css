@@ -1,7 +1,4 @@
-.main{
-    height: 100vh;
-    background-color : #E4D0D0
-}
+
 /* Tab Style Start */
     .color{
         color:#DD2022
@@ -23,16 +20,10 @@
 
     /* Change the link color on hover */
     li a:hover {
-        background-color: #cf8788;
+        background-color: #6385ce;
         color: #fff;
     }
     .icon {
         margin-right: 10px;
     }
 
-@media (max-width: 575.98px) {
-    .main{
-        height: 216vh;
-        background-color : #E4D0D0
-    }
-}

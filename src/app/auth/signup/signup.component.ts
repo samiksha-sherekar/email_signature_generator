@@ -65,7 +65,7 @@ export class SignupComponent {
     try{
       await this.auth.createUser(this.registerForm.value as IUser);
       this.alertMsg = "Success! Your account has been created."
-      this.alertColor = "success";
+      this.alertColor = "primary";
       this.router.navigate(['/email-signature'])
     }catch(e){
       const error = e as FirebaseError;
