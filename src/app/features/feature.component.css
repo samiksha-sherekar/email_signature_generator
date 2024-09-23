@@ -1,8 +1,6 @@
 
 /* Tab Style Start */
-    .color{
-        color:#DD2022
-    }
+    
     ul {
         margin: 6;
         padding: 0;
@@ -12,16 +10,17 @@
     }
     li a {
         display: block;
-        color: #0c0909;
+        color: #072AC8;
         padding: 10px 25px;
         text-decoration: none;
         border-radius: 40px;
     }
 
     /* Change the link color on hover */
-    li a:hover {
+    li a:hover,li a.active-tab {
         background-color: #6385ce;
         color: #fff;
+        font-weight: 600;
     }
     .icon {
         margin-right: 10px;

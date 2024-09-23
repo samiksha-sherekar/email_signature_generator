@@ -8,8 +8,13 @@ import { Component } from '@angular/core';
 export class FeatureComponent {
   name = '!!!';
   viewMode = 'tab1';
-  tabValue:any ="general";
+  tabs = [
+    { label: 'Personal', value: 'general' },
+    { label: 'Social', value: 'social' },
+    { label: 'Design', value: 'design' }
+  ];
   
+  tabValue: string = 'general';
   tabChange(data:any){
     this.tabValue = data
   }
