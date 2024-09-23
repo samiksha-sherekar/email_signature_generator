@@ -1,6 +1,6 @@
-<div class="container mt-5">
-    <div class="card shadow  mb-5 rounded border-primary">
-        <div class="card-header">
+<div class="container mt-5 pt-3">
+    <div class="card shadow mb-5 rounded border-primary">
+        <div class="card-header p-3">
             <h5 class="header-text">Signature Preview</h5>
         </div>
         <div class="card-body" >
@@ -8,10 +8,10 @@
                 <P class="text-center fs-4">{{signaturePreviewText}}</P>
             </div>
             <div *ngIf="formData">
-                <div class="m-3 p-3" #elementContentToCopy id="email-signature">
+                <div class="m-2 p-3" #elementContentToCopy id="email-signature">
                     <div [style.background]="formData.design?.backgroundColor">
                         <span [style.font-family]="formData.design?.fontFamily" [style.font-size.px]="formData.design?.fontSize" [style.color]="formData.design?.templateColor">
-                            <p style="margin: 0;">{{formData.general?.fName}} {{formData.general?.lName}}</p>
+                            <p style="margin: 0;font-weight:600">{{formData.general?.fName}} {{formData.general?.lName}}</p>
                             <p style="margin: 0;">{{formData.general?.position}}</p>
                             <p style="margin: 0;">{{formData.general?.email}}</p>
                             <p style="margin: 0;">{{formData.general?.mobileNo}}</p>
